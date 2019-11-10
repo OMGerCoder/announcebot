@@ -1,0 +1,20 @@
+{
+  "name": "announce-bot",
+  "version": "1.0.0",
+  "description": "An Announcement Bot for Discord.",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"No tests\" && exit 1",
+    "start": "nodemon bot.js"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "Hugh S",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "nodemon": "^1.19.4"
+  }
+}
