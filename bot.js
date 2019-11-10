@@ -2,7 +2,7 @@
 const dcord = require('discord.js');
 const dotenv = require('dotenv')
 dotenv.config();
-const prefix = 'a.'
+const { prefix } = require('./settings.json')
 // create the bot
 const bot = new dcord.Client();
 
