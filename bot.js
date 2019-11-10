@@ -1,5 +1,7 @@
 // of course, we need the library
 const dcord = require('discord.js');
+const dotenv = require('dotenv')
+dotenv.config();
 // create the bot
 const bot = new dcord.Client();
 
@@ -9,7 +11,7 @@ bot.once('ready', () => {
     bot.user.setActivity('don\'t invite me')
 })
 // login
-bot.login('NjQzMTUzODU5MDgyMTkwODk2.Xchedw.CekHiyGODSie-T44P7BVwkvWjwc')
+bot.login(process.env.TOKEN)
 // run server so heroku works
 require('http').createServer((req, res) => {
     res.statusCode = 200;
