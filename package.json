@@ -17,5 +17,8 @@
     "discord.js": "^11.5.1",
     "dotenv": "^8.2.0",
     "nodemon": "^1.19.4"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0"
   }
 }
