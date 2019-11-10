@@ -24,7 +24,7 @@ bot.on('message', msg => {
         msg.channel.send(`**Server name:** ${msg.guild.name}\n**Total members:** ${msg.guild.memberCount}`)
         console.log(`Server info command executed by ${msg.author.tag}.`)
 
-    } else if (msg.content === `${prefix}args`) {
+    } else if (cmd === `${prefix}args`) {
         if (!args.length) {
             return msg.channel.send(`You didnt provide arguments, @${msg.author.tag}!`)
         }
