@@ -15,8 +15,11 @@ bot.once('ready', () => {
 bot.on('message', msg => {
     if (msg.content === `${prefix}ping`) {
         msg.channel.send('Test complete.')
+        console.log(`Ping command executed by ${msg.author.tag}.`)
     } else if (msg.content === `${prefix}serverinfo`) {
         msg.channel.send(`**Server name:** ${msg.guild.name}\n**Total members:** ${msg.guild.memberCount}`)
+        console.log(`Server info command executed by ${msg.author.tag}.`)
+
     }
 })
 // login
