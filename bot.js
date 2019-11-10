@@ -15,6 +15,8 @@ bot.once('ready', () => {
 bot.on('message', msg => {
     if (msg.content === `${prefix}ping`) {
         msg.channel.send('Test complete.')
+    } else if (msg.content === `${prefix}serverinfo`) {
+        msg.channel.send(`**Server name:** ${msg.guild.name}\n**Total members:** ${msg.guild.memberCount}`)
     }
 })
 // login
