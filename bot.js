@@ -9,7 +9,7 @@ const bot = new dcord.Client();
 // run this code when bot is up
 bot.once('ready', () => {
     console.log(`Logged in as ${bot.user.tag} (${bot.user.id}). Run a.help to get started.`)
-    bot.user.setActivity('don\'t invite me')
+    bot.user.setActivity(`don't invite me | ${prefix}help`)
 })
 // listen for messages
 bot.on('message', msg => {
