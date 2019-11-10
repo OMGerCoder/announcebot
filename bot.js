@@ -13,6 +13,10 @@ bot.once('ready', () => {
 })
 // listen for messages
 bot.on('message', msg => {
+    if (!msg.content.startsWith(prefix) || msg.author.bot) return;
+
+    const args = msg.content.slice(prefix.length).split(' ');
+    const cmd = args.shift().toLowerCase();
     if (msg.content === `${prefix}ping`) {
         msg.channel.send('Test complete.')
         console.log(`Ping command executed by ${msg.author.tag}.`)
@@ -20,6 +24,11 @@ bot.on('message', msg => {
         msg.channel.send(`**Server name:** ${msg.guild.name}\n**Total members:** ${msg.guild.memberCount}`)
         console.log(`Server info command executed by ${msg.author.tag}.`)
 
+    } else if (msg.content === `${prefix}args`) {
+        if (!args.length) {
+            return msg.channel.send(`You didnt provide arguments, @${msg.author.tag}!`)
+        }
+        msg.channel.send(`Command name: ${cmd}\nArguments: ${args}`)
     }
 })
 // login
